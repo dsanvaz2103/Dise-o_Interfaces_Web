@@ -1,0 +1,36 @@
+body{
+    background-color: gray;
+}
+
+div{
+    border: 2px solid rgb(0, 195, 255);
+    background-color: rgb(33, 33, 33);
+}
+
+.columna1{
+    color: white;
+    float: left;
+    padding: 200px;
+}
+.columna2{
+   color: white; 
+   padding: 200px;
+   float: left;
+}
+.columna3{
+    color: white;
+    padding: 200px;
+    float: left;
+}
+
+.columna4{
+    color: white;
+    padding: 200px;
+    float: left;
+}
+
+.pie{
+    border: 5px solid white;
+    clear: both;
+    background-color: blanchedalmond;
+}

@@ -1,0 +1,34 @@
+body{
+    background-color: gray;
+}
+
+
+.cuadrado1{
+    position: absolute;
+    background-color: aqua;
+    width: 200px;
+    left: 200px;
+    top: 45%;
+    bottom: 50%;
+    z-index: -1;
+}
+
+.cuadrado2{
+    position: absolute;
+    background-color: rgb(255, 0, 195);
+    width: 200px;
+    left: 200px;
+    top: 50%;
+    bottom: 45%;
+    z-index: 0;
+}
+
+.cuadrado3{
+    position: absolute;
+    background-color: rgb(51, 255, 0);
+    width: 200px;
+    left: 200px;
+    top: 50%;
+    bottom: 46%;
+    z-index: 1;
+}
