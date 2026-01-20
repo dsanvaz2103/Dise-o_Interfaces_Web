@@ -1,0 +1,71 @@
+$colores: (
+  primario: #3498db,
+  secundario: #2ecc71,
+  alerta: #e74c3c
+);
+
+$tipos-fuente: ("Arial", "Verdana", "Helvetica");
+
+.titulo {
+  &::before {
+    content: to-upper-case(unquote("Mi título"));
+  }
+}
+
+.caja {
+  // 480px sobre 1200px
+  $ancho: percentage(480 / 1200);
+  width: ceil($ancho);
+  height: 100px;
+  background-color: #ddd;
+}
+
+.fuentes {
+  font-family: nth($tipos-fuente, 2);
+
+  // Mostrar cantidad de fuentes en consola
+  @debug "Número de fuentes: #{length($tipos-fuente)}";
+}
+
+.boton-primario {
+  background-color: map-get($colores, primario);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+
+  &::after {
+    content: if(
+      map-has-key($colores, alerta),
+      "Alerta disponible",
+      "Sin alerta"
+    );
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+$hover-selector: selector-append('.boton1', ':hover');
+
+#{$hover-selector} {
+  background-color: black;
+  color: white;
+}
+
+.boton1,
+.boton2 {
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.info {
+  @debug "Tipo de $colores: #{type-of($colores)}";
+  @debug "Tipo de $tipos-fuente: #{type-of($tipos-fuente)}";
+}
+
+.alerta {
+  background-color: lighten(map-get($colores, alerta), 15%);
+  opacity: 0.9;
+  color: white;
+  padding: 12px;
+}

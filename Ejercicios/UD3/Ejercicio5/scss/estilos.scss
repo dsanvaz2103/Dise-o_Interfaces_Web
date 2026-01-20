@@ -1,0 +1,26 @@
+$boton-primario:#3498db;
+$boton-secundario:#2ecc71;
+$boiton-alerta:#e74c3c;
+
+.boton-base{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-primario{
+    @extend .boton-base;
+    background-color: $boton-primario;
+}
+
+.boton-secundario{
+    @extend .boton-base;
+    background-color: $boton-secundario;
+}
+
+.boton-alerta{
+    @extend .boton-base;
+    background-color: $boiton-alerta;
+}

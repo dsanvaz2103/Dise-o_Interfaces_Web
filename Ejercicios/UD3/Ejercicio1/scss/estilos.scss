@@ -1,0 +1,21 @@
+$fuentePrincipal: Arial, sans-serif;
+$colorPrincipal: #3498db;
+$colorSecundario: #2ecc71;
+$colorTexto: #333;
+$padingBase: 10px;
+
+body{
+    font-family: $fuentePrincipal;
+    color: $colorPrincipal;
+    margin: 0;
+}
+
+.header{
+    background-color: $colorPrincipal;
+    color: white;
+    padding: $padingBase;
+}
+
+.card{
+    border: 2px , solid , color($colorPrincipal);
+}

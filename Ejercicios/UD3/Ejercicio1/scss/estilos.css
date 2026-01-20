@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #3498db;
+  margin: 0;
+}
+
+.header {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+}
+
+.card {
+  border: 2px, solid;
+}/*# sourceMappingURL=estilos.css.map */

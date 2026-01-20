@@ -1,0 +1,16 @@
+.content {
+  padding: $padding-base;
+  font-family: $fuente-base;
+
+  h2 {
+    margin-bottom: $margin-base;
+    color: $color-principal;
+    font-size: 1.8rem;
+  }
+
+  p {
+    margin-bottom: $margin-base;
+    line-height: 1.6;
+    color: darken($color-principal, 20%);
+  }
+}
