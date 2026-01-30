@@ -65,7 +65,7 @@ $hover-selector: selector-append('.boton1', ':hover');
 
 .alerta {
   background-color: lighten(map-get($colores, alerta), 15%);
-  opacity: 0.9;
+  opacity: 0.9; 
   color: white;
   padding: 12px;
 }

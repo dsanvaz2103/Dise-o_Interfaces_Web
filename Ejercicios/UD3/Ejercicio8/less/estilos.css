@@ -1,0 +1,43 @@
+/*************************
+ * Estilos de la tarjeta
+ *************************/
+.card {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 20px;
+  color: #333;
+}
+.card .card-image {
+  height: 180px;
+  background-color: #cce5f6;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+.card .card-content {
+  display: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.card .card-title {
+  font-size: 20px;
+  margin: 0;
+}
+.card .card-price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3498db;
+}
+.card .card-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.card .card-btn:hover {
+  background-color: #217dbb;
+}

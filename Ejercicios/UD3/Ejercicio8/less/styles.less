@@ -1,0 +1,58 @@
+@colorprimario: #3498db;
+@colortexto: #333;
+@espacio: 20px;
+@tamanio-base: 16px;
+
+.flex-center(@display: center,@justify-content: center, @aling-item: center){
+    display: @display;
+    justify-content: @justify-content;
+    align-items: @aling-item;
+}
+
+/*************************
+ * Estilos de la tarjeta
+ *************************/
+.card {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: @espacio;
+  color: @colortexto;
+
+  .card-image {
+    height: 180px;
+    background-color: lighten(@colorprimario, 35%);
+    margin-bottom: @espacio;
+    border-radius: 6px;
+  }
+
+  .card-content {
+    .flex-center();
+    flex-direction: column;
+    gap: (@espacio / 2);
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .card-price {
+    font-size: @tamanio-base * 2; // Operación: el doble del tamaño base
+    font-weight: bold;
+    color: @colorprimario;
+  }
+
+  .card-btn {
+    padding: (@espacio / 2) @espacio;
+    background-color: @colorprimario;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(@colorprimario, 10%);
+    }
+  }
+}
