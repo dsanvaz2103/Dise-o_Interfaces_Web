@@ -1,526 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Diseño de Interfaces Web</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff8f3;
-      color: #333;
-    }
-
-    header {
-      background-color: #ffa726;
-      color: white;
-      padding: 1.2rem;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #ffe0b2;
-      width: 220px;
-      min-height: 100vh;
-      float: left;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
-
-    nav a {
-      display: block;
-      padding: 0.6rem 0;
-      color: #bf360c;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      margin-left: 240px;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-
-    h2, h3, h4 {
-      color: #bf360c;
-      margin-top: 0;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    iframe.timeline-frame {
-      border: none;
-      width: 100%;
-      height: 500px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .card {
-      background-color: #fff3e0;
-      border-left: 5px solid #ffa726;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      background: white;
-    }
-
-    table th, table td {
-      border: 1px solid #e7e2da;
-      padding: 0.6rem;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    table th {
-      background-color: #ffe9cc;
-      color: #8a2f0f;
-      font-weight: 700;
-    }
-
-    table tr:nth-child(even) td {
-      background-color: #fffaf3;
-    }
-
-    .tema2-container {
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .tema2-text {
-      flex: 2 1 600px;
-      min-width: 300px;
-    }
-
-    .tema2-gallery {
-      flex: 1 1 220px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      min-width: 220px;
-    }
-
-    .tema2-gallery img {
-      width: 100%;
-      max-width: 220px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-      transition: transform 0.3s ease;
-      display: block;
-    }
-
-    .tema2-gallery img:hover {
-      transform: scale(1.03);
-    }
-
-    .small-note {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #ffe0b2;
-      margin-top: 2rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      nav { position: relative; width: 100%; min-height: auto; }
-      main { margin-left: 0; margin-right: 0; padding: 1rem; }
-      .tema2-container { flex-direction: column-reverse; }
-      .tema2-gallery { flex-direction: row; justify-content: space-between; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; }
-      .tema2-gallery img { max-width: 160px; }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diseño de Interfaces Web</title>
+    <link rel="stylesheet" href="estilosBlog.css">
 </head>
 <body>
 
 <header>
-  <h1>Diseño de Interfaces Web</h1>
+    <h1>Diseño de Interfaces Web</h1>
 </header>
 
 <nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#tema1">Tema 1: Fundamentos del Diseño</a>
+    <a href="#inicio">Inicio</a>
+    <a href="#tema1">Tema 1: Fundamentos del Diseño</a>
+    <a href="#tema2">Tema 2: Git & GitHub</a>
+    <a href="#tema3">Tema 3: SASS & Less</a>
+    <a href="#tema4">Tema 4: Flexbox & Grid</a>
 </nav>
 
 <main id="inicio">
-  <h2>Inicio</h2>
-  <p>Bienvenido al blog de <strong>Diseño de Interfaces Web</strong>. Aquí exploraremos conceptos, leyes visuales y prácticas que guían la creación de experiencias digitales efectivas y atractivas.</p>
-
-  <!-- LINEA TEMPORAL -->
-  <section>
-    <h3>📅 Línea Temporal: Hitos Históricos en el Desarrollo Web</h3>
-    <p>Consulta la línea temporal interactiva con los hitos más relevantes en la evolución del desarrollo web:</p>
-    <iframe class="timeline-frame" src="https://padlet.com/dsv0914/cronolog-a-tbtbo2as9vz4boyv" allowfullscreen></iframe>
-  </section>
-
-  <!-- TEMA 1 -->
-  <details id="tema1" open>
-    <summary>Tema 1: Fundamentos del Diseño</summary>
-
-    <!-- LEYES DE LA GESTALT -->
-    <section class="card">
-      <h3>🎨 Leyes de la Gestalt en el Diseño Web</h3>
-      <p>Las <strong>Leyes de la Gestalt</strong> explican cómo los usuarios perciben visualmente los elementos en una interfaz. Estas leyes permiten organizar la información de manera clara y coherente, mejorando la experiencia de usuario.</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Ley</th>
-            <th>Funcionalidad</th>
-            <th>Utilización</th>
-            <th>Ejemplo Web</th>
-            <th>Descripción</th>
-            <th>Imagen</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Ley del Contraste</td><td>Distinguir elementos diferentes</td><td>Destacar elementos importantes</td><td>Google.com</td><td>Logotipo negro sobre fondo blanco</td><td></td></tr>
-          <tr><td>Ley de Jerarquización</td><td>Organizar importancia visual</td><td>Establecer prioridades</td><td>Amazon.com</td><td>Títulos de diferente tamaño</td><td></td></tr>
-          <tr><td>Ley de Birkhoff</td><td>Crear patrones armoniosos</td><td>Diseño de interfaces</td><td>Olympics.com</td><td>Aros interconectados</td><td></td></tr>
-          <tr><td>Ley de Memoria</td><td>Reconocer patrones</td><td>Mantener consistencia</td><td>Facebook.com</td><td>Botón de inicio consistente</td><td></td></tr>
-          <tr><td>Ley del Cierre</td><td>Completar formas incompletas</td><td>Diseño eficiente</td><td>WWF.org</td><td>Logo del panda</td><td></td></tr>
-          <tr><td>Ley de Continuidad</td><td>Seguir líneas y curvas</td><td>Crear flujos visuales</td><td>YouTube.com</td><td>Menú desplegable</td><td></td></tr>
-          <tr><td>Ley de Proximidad</td><td>Agrupar elementos cercanos</td><td>Mostrar relaciones</td><td>Audi.com</td><td>Publicaciones relacionadas</td><td></td></tr>
-          <tr><td>Ley de Simetría</td><td>Crear composiciones equilibradas</td><td>Diseño estético</td><td>Google.com</td><td>Elementos centrados</td><td></td></tr>
-          <tr><td>Ley de Semejanza</td><td>Unir elementos similares</td><td>Crear familias visuales</td><td>Instagram.com</td><td>Botones de acción</td><td></td></tr>
-          <tr><td>Ley del Movimiento Común</td><td>Agrupar elementos dinámicos</td><td>Crear interacciones</td><td>Spotify.com</td><td>Animaciones de carga</td><td></td></tr>
-          <tr><td>Ley de Invariancia Topológica</td><td>Reconocer formas transformadas</td><td>Mantener recognoscibilidad</td><td>Gmail.com</td><td>CAPTCHA</td><td></td></tr>
-        </tbody>
-      </table>
+    <section>
+        <h2>Inicio</h2>
+        <p>Bienvenido al blog de <strong>Diseño de Interfaces Web</strong>. Aquí exploraremos conceptos, leyes visuales y prácticas que guían la creación de experiencias digitales efectivas y atractivas.</p>
     </section>
 
-    <!-- DISEÑO WEB ACTUALIDAD -->
-    <section class="card">
-      <h3>💻 El Diseño Web en la Actualidad</h3>
-      <div class="tema2-container">
-        <div class="tema2-text">
-          <section class="card">
+    <section>
+        <h3>📅 Línea Temporal: Hitos Históricos en el Desarrollo Web</h3>
+        <iframe class="timeline-frame" src="https://padlet.com/dsv0914/cronolog-a-tbtbo2as9vz4boyv" allowfullscreen></iframe>
+    </section>
+
+    <details id="tema1">
+        <summary>Tema 1: Fundamentos del Diseño</summary>
+        <section class="card">
+            <h3>🎨 Leyes de la Gestalt en el Diseño Web</h3>
+            <p>Explican cómo los usuarios perciben visualmente los elementos para organizar la información de manera clara.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ley</th>
+                        <th>Funcionalidad</th>
+                        <th>Utilización</th>
+                        <th>Ejemplo Web</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ley del Contraste</td><td>Distinguir elementos</td><td>Destacar importantes</td><td>Google.com</td><td>Logo negro sobre blanco</td></tr>
+                    <tr><td>Ley de Jerarquización</td><td>Organizar importancia</td><td>Establecer prioridades</td><td>Amazon.com</td><td>Títulos de diferente tamaño</td></tr>
+                    <tr><td>Ley de Birkhoff</td><td>Patrones armoniosos</td><td>Diseño de interfaces</td><td>Olympics.com</td><td>Aros interconectados</td></tr>
+                    <tr><td>Ley de Memoria</td><td>Reconocer patrones</td><td>Consistencia</td><td>Facebook.com</td><td>Botón inicio consistente</td></tr>
+                    <tr><td>Ley del Cierre</td><td>Completar formas</td><td>Diseño eficiente</td><td>WWF.org</td><td>Logo del panda</td></tr>
+                    <tr><td>Ley de Continuidad</td><td>Seguir líneas</td><td>Flujos visuales</td><td>YouTube.com</td><td>Menú desplegable</td></tr>
+                    <tr><td>Ley de Proximidad</td><td>Agrupar cercanos</td><td>Mostrar relaciones</td><td>Audi.com</td><td>Publicaciones relacionadas</td></tr>
+                    <tr><td>Ley de Simetría</td><td>Equilibrio</td><td>Diseño estético</td><td>Google.com</td><td>Elementos centrados</td></tr>
+                    <tr><td>Ley de Semejanza</td><td>Unir similares</td><td>Familias visuales</td><td>Instagram.com</td><td>Botones de acción</td></tr>
+                    <tr><td>Ley del Movimiento Común</td><td>Agrupar dinámicos</td><td>Interacciones</td><td>Spotify.com</td><td>Animaciones de carga</td></tr>
+                    <tr><td>Ley de Invariancia Topológica</td><td>Formas transformadas</td><td>Recognoscibilidad</td><td>Gmail.com</td><td>CAPTCHA</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h3>💻 El Diseño Web en la Actualidad</h3>
             <h4>📱 Minimalismo y Simplicidad</h4>
-            <p><strong>Descripción:</strong> Diseños limpios y esenciales que eliminan elementos innecesarios.</p>
-            <p><strong>Ejemplo:</strong> TikTok: tipografía clara y formas simples.</p>
-            <p><strong>Beneficio:</strong> Mayor legibilidad en móviles y rendimiento visual.</p>
-          </section>
-
-          <section class="card">
+            <p>Diseños limpios como <strong>TikTok</strong>. Beneficio: mayor legibilidad y rendimiento.</p>
             <h4>🌿 Diseño Ecológico</h4>
-            <p><strong>Descripción:</strong> Colores terrenales y formas orgánicas que evocan sostenibilidad.</p>
-            <p><strong>Ejemplo:</strong> Logos con hojas o elementos naturales.</p>
-            <p><strong>Beneficio:</strong> Conecta con usuarios conscientes y transmite valores ambientales.</p>
-          </section>
-
-          <section class="card">
+            <p>Colores terrenales y formas orgánicas que evocan sostenibilidad.</p>
             <h4>🧱 Profundidad y Capas</h4>
-            <p><strong>Descripción:</strong> Uso de sombras y capas para generar dimensión.</p>
-            <p><strong>Ejemplo:</strong> “Gay’s the Word”: sombras para impacto visual.</p>
-            <p><strong>Beneficio:</strong> Más interés visual sin sacrificar claridad.</p>
-          </section>
-
-          <section class="card">
+            <p>Uso de sombras para generar dimensión (Ej: Gay’s the Word).</p>
             <h4>🔄 Logotipos Dinámicos</h4>
-            <p><strong>Descripción:</strong> Variaciones del logo según contexto.</p>
-            <p><strong>Ejemplo:</strong> HotHaus, con versiones adaptadas a redes.</p>
-            <p><strong>Beneficio:</strong> Mayor flexibilidad y adaptabilidad.</p>
-          </section>
+            <p>Variaciones según contexto (Ej: HotHaus).</p>
+            <h4>❓ ¿Por qué logos planos?</h4>
+            <p>Por adaptabilidad en móviles, versatilidad y claridad inmediata.</p>
+        </section>
 
-          <section class="card">
-            <h4>🖋️ Tipografías Juguetonas</h4>
-            <p><strong>Descripción:</strong> Letras con imperfecciones controladas y coloridas.</p>
-            <p><strong>Ejemplo:</strong> TheMuStudiosCo.</p>
-            <p><strong>Beneficio:</strong> Humaniza la marca y genera cercanía.</p>
-          </section>
+        <section class="card">
+            <h3>🧠 Diferencias entre UI vs UX</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>UI (Interfaz)</th>
+                        <th>UX (Experiencia)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Definición</td><td>Apariencia visual</td><td>Interacción y satisfacción</td></tr>
+                    <tr><td>Objetivo</td><td>Atractivo y coherencia</td><td>Útil, fluida y agradable</td></tr>
+                    <tr><td>Elementos</td><td>Colores, iconos, tipografía</td><td>Usabilidad, flujos, accesibilidad</td></tr>
+                </tbody>
+            </table>
+        </section>
 
-          <section class="card">
-            <h4>🚀 Estética Retrofuturista</h4>
-            <p><strong>Descripción:</strong> Fusión entre nostalgia y modernidad.</p>
-            <p><strong>Ejemplo:</strong> Orange County Pinballs.</p>
-            <p><strong>Beneficio:</strong> Evoca emociones y modernidad.</p>
-          </section>
+        <section class="card">
+            <h3>🏗️ Elementos estructurales HTML5</h3>
+            <table>
+                <thead>
+                    <tr><th>Componente</th><th>Etiqueta</th><th>Ejemplos</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cabecera</td><td><code>&lt;header&gt;</code></td><td>Apple (Logo/Menú)</td></tr>
+                    <tr><td>Navegación</td><td><code>&lt;nav&gt;</code></td><td>Wikipedia</td></tr>
+                    <tr><td>Contenido Principal</td><td><code>&lt;main&gt;</code></td><td>MDN</td></tr>
+                    <tr><td>Barra lateral</td><td><code>&lt;aside&gt;</code></td><td>El País (Widgets)</td></tr>
+                    <tr><td>Pie de página</td><td><code>&lt;footer&gt;</code></td><td>YouTube</td></tr>
+                </tbody>
+            </table>
+        </section>
 
-          <section class="card">
-            <h4>🔶 Formas Geométricas y Abstractas</h4>
-            <p><strong>Descripción:</strong> Uso de figuras básicas y composición minimalista.</p>
-            <p><strong>Ejemplo:</strong> Neylan Design.</p>
-            <p><strong>Beneficio:</strong> Versatilidad y reconocimiento visual.</p>
-          </section>
+        <section class="card">
+            <h3>🎯 Guía de estilos — Ejemplo: Domino's Pizza</h3>
+            <p><strong>Identidad:</strong> Rapidez, calidad y comodidad. Público joven y familiar.</p>
+            <p><strong>Colores:</strong> Rojo (<code>#E31837</code>), Azul (<code>#006491</code>), Blanco (<code>#FFFFFF</code>).</p>
+            <p><strong>Tipografía:</strong> Montserrat (Títulos) y Open Sans (Cuerpo).</p>
+            <p><strong>Botones:</strong> Principal en rojo con border-radius 8px. Efecto hover con sombra.</p>
+        </section>
+    </details>
 
-          <section class="card">
-            <h4>🎨 Paletas de Colores Limitadas</h4>
-            <p><strong>Descripción:</strong> Una o dos tonalidades dominantes.</p>
-            <p><strong>Ejemplo:</strong> Granger Owings.</p>
-            <p><strong>Beneficio:</strong> Mayor coherencia y adaptabilidad.</p>
-          </section>
+    <details id="tema2">
+        <summary>Tema 2: Control de Versiones y GitHub</summary>
+        <section class="card">
+            <h3>🖥️ Ejercicios de GitHub</h3>
+            <p>Accede a las prácticas de Git y control de versiones:</p>
+            <a href="https://github.com/dsanvaz2103/Dise-o_Interfaces_Web/tree/master/Ejercicios/UD2" target="_blank" class="btn-externo" 
+               onmouseover="this.style.backgroundColor='#004f6e';" 
+               onmouseout="this.style.backgroundColor='#006491';">
+                Ir a los ejercicios en GitHub
+            </a>
+        </section>
+    </details>
 
-          <section class="card">
-            <h4>🖱️ Scrolling Design</h4>
+    <details id="tema3" open>
+        <summary>Tema 3: Preprocesadores SASS y Less</summary>
+
+        <section class="card">
+            <h3>⚙️ ¿Qué son los preprocesadores?</h3>
+            [cite_start]<p>Son herramientas que extienden las capacidades de CSS permitiendo usar lógica de programación para generar hojas de estilo más limpias y eficientes[cite: 3].</p>
             <ul>
-              <li><strong>Scroll infinito:</strong> Carga continua (Instagram, TikTok).</li>
-              <li><strong>Efecto Parallax:</strong> Movimiento de capas a distintas velocidades (Apple, Nike).</li>
+                [cite_start]<li><strong>SASS (Syntactically Awesome Style Sheets):</strong> El más popular, utiliza archivos <code>.scss</code>[cite: 1, 10].</li>
+                [cite_start]<li><strong>Less (Leaner Style Sheets):</strong> Muy similar a SASS, pero con algunas diferencias en sintaxis de variables (usa <code>@</code> en lugar de <code>$</code>)[cite: 11].</li>
             </ul>
-          </section>
+        </section>
 
-          <section class="card">
-            <h4>❓¿Por qué los logos se están volviendo más planos?</h4>
+        <section class="card">
+            <h3>🧩 Conceptos Potentes en SASS</h3>
             <ul>
-              <li><strong>Adaptabilidad:</strong> Mejor legibilidad en pantallas pequeñas.</li>
-              <li><strong>Versatilidad:</strong> Escalables y compatibles en todos los medios.</li>
-              <li><strong>Claridad:</strong> Más impacto visual y reconocimiento inmediato.</li>
+                [cite_start]<li><strong>Variables:</strong> Permiten almacenar colores o tamaños (ej. <code>$color-principal: #3498db;</code>) para reutilizarlos en todo el proyecto[cite: 11, 12].</li>
+                [cite_start]<li><strong>Anidamiento:</strong> Permite escribir selectores CSS dentro de otros, reflejando la jerarquía del HTML y evitando repeticiones[cite: 11, 12].</li>
+                [cite_start]<li><strong>Mixins:</strong> Bloques de código reutilizables que pueden recibir parámetros, ideales para prefijos o estilos complejos[cite: 11, 12].</li>
+                [cite_start]<li><strong>Operadores:</strong> Permiten realizar cálculos matemáticos (+, -, *, /) directamente en el CSS (ej. <code>width: 100% / 3;</code>)[cite: 12, 15].</li>
+                [cite_start]<li><strong>Interpolación:</strong> Inserción de valores dinámicos en selectores o propiedades usando <code>#{}</code>[cite: 27, 28].</li>
             </ul>
-          </section>
-        </div>
-    </section>
+        </section>
 
-    <!-- DIFERENCIAS UI VS UX -->
-    <section class="card">
-      <h3>🧠 Diferencias entre UI vs UX</h3>
-      <p>En diseño digital, los términos <strong>UI (User Interface)</strong> y <strong>UX (User Experience)</strong> se refieren a aspectos diferentes pero complementarios del proceso de diseño.</p>
+        <section class="card">
+            <h3>🖥️ Ejercicios de Preprocesadores (UD3)</h3>
+            <p>Consulta los ejercicios realizados con SASS y la implementación de lógica en CSS:</p>
+            <a href="https://github.com/dsanvaz2103/Dise-o_Interfaces_Web/tree/master/Ejercicios/UD3" target="_blank" class="btn-externo"
+               onmouseover="this.style.backgroundColor='#004f6e';" 
+               onmouseout="this.style.backgroundColor='#006491';">
+                Ir a los ejercicios del Tema 3 en GitHub
+            </a>
+        </section>
+    </details>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Aspecto</th>
-            <th>UI (Interfaz de Usuario)</th>
-            <th>UX (Experiencia de Usuario)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Definición</td><td>Se centra en la apariencia visual y disposición de los elementos.</td><td>Se enfoca en la interacción del usuario y su satisfacción general.</td></tr>
-          <tr><td>Objetivo principal</td><td>Diseñar una interfaz atractiva y coherente.</td><td>Hacer que la experiencia sea útil, fluida y agradable.</td></tr>
-          <tr><td>Elementos clave</td><td>Colores, tipografía, botones, iconos.</td><td>Usabilidad, accesibilidad, flujo de navegación.</td></tr>
-          <tr><td>Herramientas</td><td>Figma, Adobe XD, Sketch.</td><td>Miro, Notion, pruebas de usuario.</td></tr>
-          <tr><td>Resultado</td><td>Interfaz visual atractiva.</td><td>Experiencia efectiva y memorable.</td></tr>
-        </tbody>
-      </table>
+    <details id="tema4">
+        <summary>Tema 4: Maquetación con Flexbox y Grid Layout</summary>
+        <section class="card">
+            <h3>📏 Flexbox vs CSS Grid</h3>
+            <p>Según las directrices de diseño modernas, la elección entre Flexbox y Grid depende de la dimensión del diseño:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Situación</th>
+                        <th>Flexbox</th>
+                        <th>CSS Grid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dimensión</strong></td>
+                        <td>Unidimensional (Fila O Columna)</td>
+                        <td>Bidimensional (Fila Y Columna)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Uso ideal</strong></td>
+                        <td>Componentes (Menús, botones alineados)</td>
+                        <td>Estructura general de la página (Layout)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-      <p><strong>En resumen:</strong> el <em>UX</em> diseña la experiencia y el <em>UI</em> le da forma visual. Ambos son esenciales para lograr una interfaz moderna y efectiva.</p>
-    </section>
+        <section class="card">
+            <h3>🧩 Conceptos Clave</h3>
+            <ul>
+                <li><strong>Flexbox:</strong> <code>display: flex;</code>, alineación con <code>justify-content</code> y <code>align-items</code>.</li>
+                <li><strong>Grid:</strong> Rejillas con <code>grid-template-columns</code>, unidad <code>fr</code> y <code>gap</code>.</li>
+            </ul>
+        </section>
 
-    <!-- INTERACCIÓN PERSONA - ORDENADOR -->
-    <section class="card">
-      <h3>🧍‍♂️ Interacción Persona - Ordenador</h3>
-      <p>Los diseños interactivos buscan crear una conexión entre los usuarios y el contenido mediante elementos que permiten la <strong>comunicación bidireccional</strong>, como imágenes, botones, menús o formularios.</p>
-
-      <h4>🔹 Principios Interactivos en Diseño</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Principio</th>
-            <th>Descripción</th>
-            <th>Objetivo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Consistencia</strong></td><td>Elementos coherentes y uniformes en toda la interfaz.</td><td>Facilita el aprendizaje y la navegación del usuario.</td></tr>
-          <tr><td><strong>Aprendizaje Intuitivo</strong></td><td>Interfaz natural y comprensible sin aprendizaje adicional.</td><td>Reduce la curva de aprendizaje y mejora la experiencia inicial.</td></tr>
-          <tr><td><strong>Usabilidad</strong></td><td>Accesibilidad intuitiva y eficiencia en las interacciones.</td><td>Garantiza una experiencia fluida y efectiva.</td></tr>
-          <tr><td><strong>Previsión</strong></td><td>Anticipación de necesidades con instrucciones o ejemplos claros.</td><td>Evita errores y mejora la autonomía del usuario.</td></tr>
-          <tr><td><strong>Retroalimentación</strong></td><td>Responde de forma inmediata a las acciones del usuario.</td><td>Reconoce interacciones y facilita la comprensión.</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- ====== NUEVA ACTIVIDAD: ELEMENTOS ESTRUCTURALES ====== -->
-    <section class="card">
-      <h3>🏗️ Elementos estructurales</h3>
-      <p>Componentes básicos de una página web, su uso y la etiqueta HTML5 recomendada.</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Componente</th>
-            <th>Usos</th>
-            <th>Etiqueta HTML5</th>
-            <th>Ejemplos</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cabecera</td>
-            <td>- Logo<br>- Menú<br>- Barra de búsqueda</td>
-            <td><code>&lt;header&gt;</code></td>
-            <td>Apple</td>
-          </tr>
-          <tr>
-            <td>Navegación</td>
-            <td>- Enlaces principales<br>- Menú</td>
-            <td><code>&lt;nav&gt;</code></td>
-            <td>Wikipedia</td>
-          </tr>
-          <tr>
-            <td>Sección</td>
-            <td>- Contenido agrupado<br>- Noticias</td>
-            <td><code>&lt;section&gt;</code></td>
-            <td>BBC</td>
-          </tr>
-          <tr>
-            <td>Artículo</td>
-            <td>- Post de blog<br>- Publicación</td>
-            <td><code>&lt;article&gt;</code></td>
-            <td>Medium</td>
-          </tr>
-          <tr>
-            <td>Barra lateral</td>
-            <td>- Widgets<br>- Publicidad<br>- Enlaces</td>
-            <td><code>&lt;aside&gt;</code></td>
-            <td>El País</td>
-          </tr>
-          <tr>
-            <td>Pie de página</td>
-            <td>- Contacto<br>- Copyright<br>- Redes</td>
-            <td><code>&lt;footer&gt;</code></td>
-            <td>YouTube</td>
-          </tr>
-          <tr>
-            <td>Contenedor</td>
-            <td>- Agrupar bloques de contenido</td>
-            <td><code>&lt;div&gt;</code></td>
-            <td>Casi todas las webs</td>
-          </tr>
-          <tr>
-            <td>Contenido base</td>
-            <td>- Texto principal</td>
-            <td><code>&lt;main&gt;</code></td>
-            <td>MDN</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- ====== NUEVA ACTIVIDAD: GUÍA DE ESTILOS (DOMINO'S EXAMPLE) ====== -->
-    <section class="card">
-      <h3>🎯 Guía de estilos — Ejemplo: Domino's Pizza</h3>
-      <p class="small-note">Documento resumen de identidad visual y normas de aplicación web para el proyecto.</p>
-
-      <h4>1. Definir la identidad del proyecto</h4>
-      <p><strong>Tipo de negocio:</strong> Domino's Pizza — cadena internacional de comida rápida especializada en pizzas, enfocada en rapidez, calidad y comodidad (a domicilio y para recoger).</p>
-      <p><strong>Valores a transmitir:</strong> Rápido, moderno, cercano, divertido y confiable.</p>
-      <p><strong>Público objetivo:</strong> Jóvenes (18–35), familias y oficinistas que buscan comida sabrosa y conveniente.</p>
-
-      <h4>2. Colores corporativos</h4>
-      <p><strong>Emociones:</strong> Energía, apetito, confianza y dinamismo.</p>
-      <p><strong>Paleta:</strong></p>
-      <ul>
-        <li><strong>Rojo:</strong> <code>#E31837</code> (energía y apetito)</li>
-        <li><strong>Azul:</strong> <code>#006491</code> (confianza)</li>
-        <li><strong>Blanco:</strong> <code>#FFFFFF</code> (claridad)</li>
-        <li><strong>Gris claro:</strong> <code>#F4F4F4</code> (fondos neutros)</li>
-        <li><strong>Negro:</strong> <code>#000000</code> (texto/contraste)</li>
-      </ul>
-      <p><strong>Comportamiento:</strong> En fondo claro el rojo/azul se usan como acentos; en oscuro el logotipo se adapta a versiones en blanco o alto contraste.</p>
-
-      <h4>3. Tipografía</h4>
-      <p><strong>Fuentes:</strong> Sans-serif modernas y legibles.</p>
-      <ul>
-        <li><strong>Principal:</strong> Montserrat (títulos, menús, botones)</li>
-        <li><strong>Secundaria:</strong> Open Sans (cuerpo y descripciones)</li>
-      </ul>
-      <p><strong>Jerarquía sugerida:</strong></p>
-      <ul>
-        <li>H1: Montserrat Bold, 40–48 px</li>
-        <li>H2: Montserrat SemiBold, 28–32 px</li>
-        <li>Texto cuerpo: Open Sans Regular, 16 px</li>
-        <li>Etiquetas/detalles: Open Sans Medium, 12–14 px</li>
-      </ul>
-      <p><strong>Adaptación móvil:</strong> reducir 20–25% los tamaños; mantener espacios amplios.</p>
-
-      <h4>4. Iconografía y elementos gráficos</h4>
-      <p><strong>Iconos:</strong> planos (flat), relleno simple — carrito, pizza, usuario, ubicación, reloj, promociones.</p>
-      <p><strong>Fotografía:</strong> imágenes reales de alta calidad, iluminación cálida, ingredientes en primer plano.</p>
-      <p><strong>Coherencia:</strong> mismo grosor de línea, esquinas redondeadas y uso de colores corporativos.</p>
-
-      <h4>5. Botones y CTA</h4>
-      <p><strong>Estilos:</strong></p>
-      <ul>
-        <li><strong>Principal:</strong> fondo rojo <code>#E31837</code>, texto blanco, border-radius 8px.</li>
-        <li><strong>Secundario:</strong> fondo blanco, borde rojo, texto rojo.</li>
-      </ul>
-      <p><strong>Efectos:</strong> hover = ligera sombra + tono más claro; active = color más oscuro + efecto “presión”.</p>
-      <p><strong>Tamaños:</strong> altura 48 px en desktop, 40 px en móvil. CTA principal destacado en la parte superior o centrado.</p>
-
-      <h4>6. Estilo de imágenes</h4>
-      <p><strong>Tipo:</strong> fotografía real, saturada y con buen contraste.</p>
-      <p><strong>Tratamiento:</strong> fondos desenfocados o neutros; sin bordes ni filtros excesivos; integradas en grillas/cards.</p>
-
-      <h4>7. Espaciado y disposición</h4>
-      <ul>
-        <li>Márgenes entre secciones: mínimo 48 px.</li>
-        <li>Padding interno de cards: 16–24 px.</li>
-        <li>Cards: ancho entre 320–400 px.</li>
-        <li>Grid principal: 12 columnas.</li>
-        <li>Breakpoints: 320 px (móvil), 768 px (tablet), 1200 px (desktop).</li>
-      </ul>
-
-      <h4>8. Normas de interacción y usabilidad</h4>
-      <p><strong>Mensajes:</strong></p>
-      <ul>
-        <li>Éxito: verde <code>#2ECC71</code> con icono ✓</li>
-        <li>Error: rojo <code>#E31837</code> con icono ⚠️</li>
-        <li>Información: azul <code>#006491</code></li>
-      </ul>
-      <p><strong>Comportamiento de componentes:</strong></p>
-      <ul>
-        <li>Menú superior fijo.</li>
-        <li>Formularios con validación inmediata y feedback visual.</li>
-        <li>Sliders automáticos con controles visibles.</li>
-      </ul>
-
-      <h4>9. Patrones de navegación</h4>
-      <p><strong>Web:</strong> barra superior con secciones “Menú”, “Promociones”, “Ubicaciones”, “Mi pedido”.</p>
-      <p><strong>Móvil:</strong> menú tipo hamburguesa accesible con el pulgar; CTA principal visible y accesible.</p>
-
-      <p class="small-note">Este esquema puede adaptarse a cualquier marca; aquí se presenta con Domino's como ejemplo práctico. Puedes exportar estas reglas a un fichero de estilo (CSS) y a componentes reutilizables en tu sistema de diseño.</p>
-    </section>
-
-  </details>
-
-  <details id="tema2">
-    <summary>Tema 2: Control de Versiones y GitHub</summary>
-
-    <!-- BOTÓN A EJERCICIOS -->
-    <section class="card">
-      <h3>🖥️ Ejercicios de GitHub</h3>
-      <p>Pulsa el botón para acceder a los ejercicios prácticos en GitHub relacionados con el uso de Git y control de versiones:</p>
-      <a href="https://github.com/dsanvaz2103/Dise-o_Interfaces_Web/tree/master/Ejercicios/UD2" target="_blank" style="
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #006491;
-        color: white;
-        font-weight: bold;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-      " onmouseover="this.style.backgroundColor='#004f6e';" onmouseout="this.style.backgroundColor='#006491';">
-        Ir a los ejercicios en GitHub
-      </a>
-    </section>
-  </details>
+        <section class="card">
+            <h3>🖥️ Ejercicios de Flexbox y Grid (UD4)</h3>
+            <a href="https://github.com/dsanvaz2103/Dise-o_Interfaces_Web/tree/master/Ejercicios/UD4" target="_blank" class="btn-externo"
+               onmouseover="this.style.backgroundColor='#004f6e';" 
+               onmouseout="this.style.backgroundColor='#006491';">
+                Ir a los ejercicios del Tema 4 en GitHub
+            </a>
+        </section>
+    </details>
 </main>
 
 <footer>
-  &copy; 2025/2026 Diseño de Interfaces Web
+    &copy; 2025/2026 Diseño de Interfaces Web
 </footer>
 
 </body>
