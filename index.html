@@ -15,7 +15,7 @@
 <nav>
     <a href="#inicio">Inicio</a>
     <a href="#tema1">Tema 1: Fundamentos del Diseño</a>
-    <a href="#tema2">Tema 2: Git & GitHub</a>
+    <a href="#tema2">Tema 2: Hojas de estilo CSS</a>
     <a href="#tema3">Tema 3: SASS & Less</a>
     <a href="#tema4">Tema 4: Flexbox & Grid</a>
 </nav>
@@ -31,7 +31,7 @@
         <iframe class="timeline-frame" src="https://padlet.com/dsv0914/cronolog-a-tbtbo2as9vz4boyv" allowfullscreen></iframe>
     </section>
 
-    <details id="tema1">
+     <details id="tema1">
         <summary>Tema 1: Fundamentos del Diseño</summary>
         <section class="card">
             <h3>🎨 Leyes de la Gestalt en el Diseño Web</h3>
@@ -119,11 +119,33 @@
         </section>
     </details>
 
-    <details id="tema2">
-        <summary>Tema 2: Control de Versiones y GitHub</summary>
+    <details id="tema2" open>
+        <summary>Tema 2: Hojas de estilo CSS</summary>
+        
         <section class="card">
-            <h3>🖥️ Ejercicios de GitHub</h3>
-            <p>Accede a las prácticas de Git y control de versiones:</p>
+            <h3>🎨 Conceptos Fundamentales de CSS</h3>
+            <p>CSS permite separar el contenido (HTML) de la presentación. Algunos pilares clave son:</p>
+            <ul>
+                <li><strong>Selectores:</strong> Básicos (etiqueta, clase <code>.</code>, ID <code>#</code>) y Combinadores (descendientes, hijos directos <code>&gt;</code>).</li>
+                <li><strong>Unidades de medida:</strong> Absolutas (<code>px</code>) y Relativas (<code>em</code>, <code>rem</code>, <code>%</code>, <code>vh/vw</code>) para diseños adaptables.</li>
+                <li><strong>Modelo de Caja:</strong> Control de <code>margin</code>, <code>border</code>, <code>padding</code> y el contenido.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>✨ Buenas Prácticas y Código Limpio</h3>
+            <p>Para mantener un proyecto escalable es vital seguir reglas de organización:</p>
+            <ul>
+                <li><strong>Nombres Semánticos:</strong> Usar <code>.main-header</code> en lugar de <code>.header1</code>.</li>
+                <li><strong>Reutilización:</strong> Crear clases genéricas como <code>.btn</code> y modificadores como <code>.btn-primary</code>.</li>
+                <li><strong>Comentarios:</strong> Dividir el archivo en secciones (Global, Header, Main, Footer).</li>
+                <li><strong>Validación:</strong> Comprobar siempre el código con el validador del W3C.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>🖥️ Ejercicios de CSS y GitHub</h3>
+            <p>Accede a las prácticas de estilos, selectores y control de versiones:</p>
             <a href="https://github.com/dsanvaz2103/Dise-o_Interfaces_Web/tree/master/Ejercicios/UD2" target="_blank" class="btn-externo" 
                onmouseover="this.style.backgroundColor='#004f6e';" 
                onmouseout="this.style.backgroundColor='#006491';">
