@@ -1,0 +1,23 @@
+/* Estilos para el footer */
+.footer {
+    display: flex;                /* Activamos Flexbox */
+    justify-content: space-between; /* Empuja los elementos a los extremos y reparte el espacio */
+    align-items: center;          /* Centrado vertical perfecto */
+    
+    padding: 0 40px;              /* Espacio interno para que no toquen los bordes de la pantalla */
+    height: 80px;                 /* Altura definida para notar el centrado vertical */
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: sans-serif;
+    border-top: 3px solid #3498db;
+}
+
+/* Estilo opcional para los textos */
+.footer p {
+    margin: 0;                    /* Quitamos márgenes por defecto de los párrafos */
+    cursor: pointer;
+}
+
+.footer p:hover {
+    color: #3498db;               /* Un toque de interactividad */
+}

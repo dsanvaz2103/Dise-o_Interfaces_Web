@@ -1,0 +1,92 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* 1. HEADER */
+.header {
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    align-items: center;            /* Centrado vertical */
+    padding: 20px 5%;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;                      /* Separación uniforme entre enlaces */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 2. LAYOUT PRINCIPAL (MAIN) */
+.main {
+    display: flex;
+    flex: 1;                        /* Hace que el main crezca para ocupar el espacio central */
+    padding: 20px;
+    gap: 20px;                      /* Espacio entre Sidebar y Contenido */
+}
+
+.sidebar {
+    flex-basis: 250px;              /* Ancho fijo base para el sidebar */
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contenido {
+    flex-grow: 1;                   /* El contenido ocupa todo el espacio restante */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 3. CARDS */
+.cards {
+    display: flex;
+    gap: 15px;                      /* Espacio uniforme sin márgenes manuales */
+    margin-top: 20px;
+    flex-wrap: wrap;                /* OPCIONAL: Salta de línea si no caben */
+}
+
+.card {
+    flex: 1;                        /* Todas el mismo tamaño */
+    min-width: 150px;               /* Tamaño mínimo para que no se compriman demasiado */
+    height: 150px;
+    background-color: #3498db;
+    color: white;
+    display: flex;                  /* Centramos el texto dentro de la card */
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* 4. FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Espacio repartido automáticamente */
+    align-items: center;            /* Alineación vertical */
+    padding: 20px 5%;
+    background-color: #333;
+    color: white;
+    margin-top: auto;               /* Empuja el footer al final si el main es pequeño */
+}
+
+/* 5. OPCIONAL: CAMBIO DE ORDEN */
+/* Si quisiéramos que el sidebar apareciera después del contenido visualmente */
+/* .sidebar { order: 2; } */

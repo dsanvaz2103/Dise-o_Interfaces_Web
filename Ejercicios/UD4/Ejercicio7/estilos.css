@@ -1,0 +1,34 @@
+/* Estilos base */
+body {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* 1. La Galería */
+.galeria {
+    display: grid;
+    
+    /* Reto opcional: Cambia el número (3) para tener más o menos columnas */
+    /* repeat(3, 1fr) crea 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr);
+    
+    gap: 15px;            /* Espacio uniforme entre filas y columnas */
+    max-width: 1000px;    /* Para que no se estire infinito en pantallas enormes */
+    margin: 0 auto;       /* Centra la galería en la pantalla */
+}
+
+/* 2. Las Imágenes */
+.galeria img {
+    width: 100%;          /* Obliga a la imagen a ocupar todo el ancho de su celda */
+    height: auto;         /* Mantiene la proporción */
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto visual al pasar el ratón */
+.galeria img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}

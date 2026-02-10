@@ -1,0 +1,28 @@
+/* Estilo del contenedor */
+.cards {
+    display: flex;                /* Crea el contexto flex */
+    justify-content: space-between; /* Distribuye espacio uniforme ENTRE las cards */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilo de las tarjetas individuales */
+.card {
+    flex: 1;                     /* Hace que todas crezcan y ocupen el mismo tamaño */
+    margin: 0 10px;              /* Espaciado lateral para que no se peguen */
+    height: 150px;
+    background-color: #ffffff;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    
+    /* Centrado de texto interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* Ajuste para que las tarjetas de los extremos no tengan margen exterior */
+.card:first-child { margin-left: 0; }
+.card:last-child { margin-right: 0; }
