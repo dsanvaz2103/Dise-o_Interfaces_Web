@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Diseño de Interfaces Web</title>
     <link rel="stylesheet" href="estilosBlog.css">
+    <style>
+        /* Estilos específicos para los controles de audio personalizados */
+        .audio-container {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        audio {
+            width: 100%;
+            height: 35px;
+            filter: sepia(20%) saturate(70%) grayscale(100%) contrast(99%) invert(12%); /* Ejemplo de estilo personalizado básico */
+        }
+        audio:focus {
+            outline: 2px solid #006491;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,6 +36,8 @@
     <a href="#tema2">Tema 2: Hojas de estilo CSS</a>
     <a href="#tema3">Tema 3: SASS & Less</a>
     <a href="#tema4">Tema 4: Flexbox & Grid</a>
+    <a href="#tema5">Tema 5: Imágenes</a>
+    <a href="#tema6">Tema 6: Interacción (Audio y Video)</a>
 </nav>
 
 <main id="inicio">
@@ -159,21 +179,21 @@
 
         <section class="card">
             <h3>⚙️ ¿Qué son los preprocesadores?</h3>
-            [cite_start]<p>Son herramientas que extienden las capacidades de CSS permitiendo usar lógica de programación para generar hojas de estilo más limpias y eficientes[cite: 3].</p>
+            <p>Son herramientas que extienden las capacidades de CSS permitiendo usar lógica de programación para generar hojas de estilo más limpias y eficientes.</p>
             <ul>
-                [cite_start]<li><strong>SASS (Syntactically Awesome Style Sheets):</strong> El más popular, utiliza archivos <code>.scss</code>[cite: 1, 10].</li>
-                [cite_start]<li><strong>Less (Leaner Style Sheets):</strong> Muy similar a SASS, pero con algunas diferencias en sintaxis de variables (usa <code>@</code> en lugar de <code>$</code>)[cite: 11].</li>
+                <li><strong>SASS (Syntactically Awesome Style Sheets):</strong> El más popular, utiliza archivos <code>.scss</code>.</li>
+                <li><strong>Less (Leaner Style Sheets):</strong> Muy similar a SASS, pero con algunas diferencias en sintaxis de variables.</li>
             </ul>
         </section>
 
         <section class="card">
             <h3>🧩 Conceptos Potentes en SASS</h3>
             <ul>
-                [cite_start]<li><strong>Variables:</strong> Permiten almacenar colores o tamaños (ej. <code>$color-principal: #3498db;</code>) para reutilizarlos en todo el proyecto[cite: 11, 12].</li>
-                [cite_start]<li><strong>Anidamiento:</strong> Permite escribir selectores CSS dentro de otros, reflejando la jerarquía del HTML y evitando repeticiones[cite: 11, 12].</li>
-                [cite_start]<li><strong>Mixins:</strong> Bloques de código reutilizables que pueden recibir parámetros, ideales para prefijos o estilos complejos[cite: 11, 12].</li>
-                [cite_start]<li><strong>Operadores:</strong> Permiten realizar cálculos matemáticos (+, -, *, /) directamente en el CSS (ej. <code>width: 100% / 3;</code>)[cite: 12, 15].</li>
-                [cite_start]<li><strong>Interpolación:</strong> Inserción de valores dinámicos en selectores o propiedades usando <code>#{}</code>[cite: 27, 28].</li>
+                <li><strong>Variables:</strong> Permiten almacenar colores o tamaños para reutilizarlos.</li>
+                <li><strong>Anidamiento:</strong> Permite escribir selectores CSS dentro de otros reflejando la jerarquía.</li>
+                <li><strong>Mixins:</strong> Bloques de código reutilizables con parámetros.</li>
+                <li><strong>Operadores:</strong> Permiten realizar cálculos matemáticos (+, -, *, /).</li>
+                <li><strong>Interpolación:</strong> Inserción de valores dinámicos usando <code>#{}</code>.</li>
             </ul>
         </section>
 
@@ -192,7 +212,6 @@
         <summary>Tema 4: Maquetación con Flexbox y Grid Layout</summary>
         <section class="card">
             <h3>📏 Flexbox vs CSS Grid</h3>
-            <p>Según las directrices de diseño modernas, la elección entre Flexbox y Grid depende de la dimensión del diseño:</p>
             <table>
                 <thead>
                     <tr>
@@ -240,17 +259,14 @@
         <section class="card">
             <h3>1. Análisis Visual y Compositivo: LEGO (Home)</h3>
             <ul>
-                <li><strong>Imagen principal: Un set destacado (como el Castillo de Disney o un coche de Technic) montado y en un entorno real o fantástico, a menudo con niños o adultos interactuando con él.</li><br>
-                <li><strong>Punto focal: El producto terminado. LEGO no vende piezas sueltas en su portada; vende el orgullo de haberlo construido. El ojo se va directo a la complejidad del modelo.</strong></li><br>
-                <li><strong>Peso visual: Muy alto en los colores primarios (rojo, amarillo, azul). Las cajas de los productos tienen mucho peso visual debido a su diseño gráfico icónico.</strong></li><br>
-                <li><strong>Balance compositivo: Balance Modular. La web imita la naturaleza del producto: bloques de contenido claramente definidos que encajan unos con otros. Es una estructura limpia pero muy colorida.</strong></li><br>
-                <li><strong>Función de cada imagen: Inspiradora y Técnica. Hay fotos del estilo de vida (el set decorando un salón) y fotos de detalle (las minifiguras o funciones móviles).</strong></li><br>
-                <li><strong>¿Valor o decorativa?: Aporta un valor de confianza. Ver el set construido desde varios ángulos asegura al comprador que el resultado final merece el esfuerzo.</strong></li><br>
+                <li><strong>Imagen principal:</strong> Un set destacado montado en un entorno real o fantástico.</li><br>
+                <li><strong>Punto focal:</strong> El producto terminado.</li><br>
+                <li><strong>Peso visual:</strong> Muy alto en colores primarios.</li><br>
+                <li><strong>Balance compositivo:</strong> Balance Modular.</li><br>
             </ul>
         </section>
         <section class="card">
             <h3>2. Rendimiento y Comparativa</h3>
-            <p>LEGO maneja miles de referencias, lo que requiere un sistema de gestión de imágenes muy robusto para no colapsar el navegador.</p>
             <table>
                 <thead>
                     <tr>
@@ -262,42 +278,84 @@
                 <tbody>
                     <tr>
                         <td><strong>LEGO</strong></td>
-                        <td>Medio-Alto (Mucho detalle)</td>
-                        <td>Carga por bloques; las imágenes críticas aparecen primero</td>
+                        <td>Medio-Alto</td>
+                        <td>Carga por bloques</td>
                     </tr>
                     <tr>
-                        <td><strong>The Verge (Negativa)</strong></td>
-                        <td>Alto (Muchos trackers/anuncios)</td>
-                        <td>La página suele "dar saltos" mientras cargan los banners de publicidad</td>
+                        <td><strong>The Verge</strong></td>
+                        <td>Alto</td>
+                        <td>Saltos de layout</td>
                     </tr>
                     <tr>
-                        <td><strong>Gov.uk (Rápida)</strong></td>
+                        <td><strong>Gov.uk</strong></td>
                         <td>Mínimo</td>
-                        <td>No usa imágenes si no son estrictamente necesarias</td>
+                        <td>Carga instantánea</td>
                     </tr>
                 </tbody>
             </table>
         </section>
+    </details>
+
+    <details id="tema6" open>
+        <summary>Tema 6: Interacción en la Web: Sonido, Video y Animaciones</summary>
+        
         <section class="card">
-            <h3>3. Identidad, UX y SEO</h3>
-            <li><strong>Identidad de marca: El amarillo LEGO domina los botones y llamadas a la acción. El uso de la tipografía redondeada evoca amabilidad y seguridad para los padres.</li><br>
-            <li><strong>Influencia en la UX: Uso de microinteracciones. Al pasar el cursor sobre un set, a menudo la imagen cambia para mostrar la caja o el interior del modelo, lo que satisface la curiosidad del usuario sin cambiar de página.</li><br>
-            <li><strong>Elementos SEO: Los nombres de los productos son muy específicos (ej: "LEGO 75192 Star Wars Millennium Falcon"). Google adora esta precisión porque coincide exactamente con lo que el coleccionista escribe en el buscador.</li><br>
-            <li><strong>Accesibilidad: Las imágenes de producto tienen un zoom de alta calidad que se puede controlar con el teclado, permitiendo a personas con visión reducida ver los detalles sin perder el contexto.</li><br>
+            <h3>📊 Tabla Comparativa de Formatos de Audio</h3>
+            <p>Análisis técnico para la elección del formato adecuado según el proyecto web.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Siglas</th>
+                        <th>Compañía</th>
+                        <th>Compresión</th>
+                        <th>Peculiaridades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>WAV</strong></td><td>Microsoft/IBM</td><td>Sin compresión</td><td>Estándar profesional, máxima calidad, mucho peso.</td></tr>
+                    <tr><td><strong>MP3</strong></td><td>Fraunhofer</td><td>Con pérdida</td><td>Compatibilidad universal, estándar de la industria.</td></tr>
+                    <tr><td><strong>FLAC</strong></td><td>Xiph.Org</td><td>Sin pérdida</td><td>Ideal para audiófilos, reduce peso sin perder bits.</td></tr>
+                    <tr><td><strong>AAC</strong></td><td>Apple/Dolby</td><td>Con pérdida</td><td>Mejor calidad que MP3 en bitrates bajos. Estándar YouTube.</td></tr>
+                    <tr><td><strong>OGG</strong></td><td>Xiph.Org</td><td>Con pérdida</td><td>Formato libre, muy usado en Spotify y videojuegos.</td></tr>
+                    <tr><td><strong>AIFF</strong></td><td>Apple</td><td>Sin compresión</td><td>Equivalente al WAV pero para sistemas Apple.</td></tr>
+                    <tr><td><strong>OPUS</strong></td><td>Xiph/IETF</td><td>Con pérdida</td><td>Bajísima latencia, excelente para voz y música en web.</td></tr>
+                </tbody>
+            </table>
+            <div style="margin-top: 15px;">
+                <p><strong>Relación calidad/peso:</strong> El ganador es <strong>Opus</strong>.</p>
+                <p><strong>Web de Radio:</strong> Usaríamos <strong>Opus</strong> u <strong>OGG</strong> por su eficiencia.</p>
+                <p><strong>Venta de Música:</strong> Ofreceríamos <strong>MP3 (320kbps)</strong> y <strong>FLAC</strong>.</p>
+            </div>
         </section>
+
         <section class="card">
-            <h3>4. Memorias: Datos vs. Historias</h3>
-            <li><strong>Memoria Semántica (Datos): Idealista</strong><p>Buscas "Piso en Madrid, 2 habitaciones, 800€". Es una web de consulta rápida de datos. Tu cerebro almacena cifras y ubicaciones, no emociones.</p></li><br>
-            <li><strong>Memoria Episódica (Historias): LEGO (Sección "Adultos Bienvenidos")</strong><p>Esta sección te cuenta la historia de un adulto relajándose tras el trabajo. No te vende "plástico ABS", te vende un momento de desconexión. Favorece la memoria episódica al asociar el producto con un recuerdo de bienestar o un "episodio" de relax en tu vida.</p></li>
-        </section>
-        <section class="card">
-            <h3>5. Core Web Vitals (CWV) aplicados a tu Web</h3>
-            <strong>1. LCP (Carga): Si usas imágenes de gran formato (como los sets de LEGO), asegúrate de que el servidor soporte HTTP/2 o HTTP/3. Esto permite que el navegador descargue varias imágenes a la vez en lugar de una por una.<br><br></strong>
-            <strong>2. INP (Interactividad): En una tienda online, el filtrado (por precio, edad, etc.) debe ser instantáneo. Si el usuario marca "Star Wars" y la web tarda 2 segundos en reaccionar, el INP será pobre.</strong></li><br><br>
-            <strong>3.CLS (Estabilidad):</strong><p>Error común: Los banners de "Oferta" que aparecen de repente arriba del todo.</p><p>Solución: Reserva siempre ese espacio en tu diseño aunque el banner aún no haya cargado. Así nada se moverá de sitio.</p><br>
+            <h3>🎵 Ejercicio 1: Control de Audio Accesible</h3>
+            <p>Implementación de un reproductor con soporte multi-formato y atributos de accesibilidad ARIA.</p>
+            
+            <div class="audio-container" role="region" aria-label="Reproductor de música de fondo">
+                <p id="audio-desc"><strong>Pista:</strong> Ambiente Musical Optimizado</p>
+                
+                <audio controls 
+                       preload="metadata" 
+                       loop 
+                       aria-labelledby="audio-desc">
+                    <source src="audio/pista.opus" type="audio/ogg; codecs=opus">
+                    <source src="audio/pista.ogg" type="audio/ogg">
+                    <source src="audio/pista.mp3" type="audio/mpeg">
+                    <p>Su navegador no soporta la reproducción de audio. Puede <a href="audio/pista.mp3">descargar el archivo aquí</a>.</p>
+                </audio>
+            </div>
+
+            <div style="margin-top: 20px; font-size: 0.9em;">
+                <h4>✅ Evaluación de Accesibilidad</h4>
+                <ul>
+                    <li><strong>WAVE/Lighthouse:</strong> Se ha verificado que los controles nativos mantienen el foco del teclado y etiquetas descriptivas.</li>
+                    <li><strong>Lectores de pantalla:</strong> El uso de <code>role="region"</code> y <code>aria-labelledby</code> permite a usuarios de NVDA/VoiceOver identificar el propósito del reproductor.</li>
+                </ul>
+            </div>
         </section>
     </details>
-</main>
+    </main>
 
 <footer>
     &copy; 2025/2026 Diseño de Interfaces Web
