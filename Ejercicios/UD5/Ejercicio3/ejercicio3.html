@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparativa Raster vs Vectorial - Ampliación 300%</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; background-color: #f4f4f4; }
+        .container { display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; }
+        .image-box { text-align: center; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        
+        /* Contenedor para controlar el tamaño visual */
+        .frame { 
+            border: 2px dashed #bbb; 
+            margin: 20px auto;
+            display: inline-block;
+            background: #eee;
+        }
+
+        /* AJUSTE SEGÚN ENUNCIADO: Ampliación al 300% */
+        .zoom {
+            width: 300px; /* Si la imagen original es de 100px, esto es el 300% */
+            height: auto;
+            display: block;
+        }
+
+        .label-original { color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">Laboratorio: Raster vs Vectorial</h1>
+    <p style="text-align:center;">Ambas imágenes han sido forzadas mediante CSS a mostrarse al <b>300%</b> de su tamaño sugerido.</p>
+    
+    <div class="container">
+        <div class="image-box">
+            <h3>Mapa de Bits (JPG)</h3>
+            <span class="label-original">Original: 100px | Visual: 300px</span>
+            <div class="frame">
+                <img src="https://picsum.photos/id/10/100/100" alt="Paisaje JPG" class="zoom">
+            </div>
+            <p>🔍 <b>Resultado:</b> Se ve borroso o con "cuadraditos" (píxeles).</p>
+        </div>
+
+        <div class="image-box">
+            <h3>Imagen Vectorial (SVG)</h3>
+            <span class="label-original">Original: 100px | Visual: 300px</span>
+            <div class="frame">
+                <svg width="100" height="100" viewBox="0 0 24 24" fill="#FFD700" class="zoom" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 .587l3.668 7.431 8.214 1.179-5.941 5.795 1.403 8.193L12 18.897l-7.344 3.888 1.403-8.193L.118 9.197l8.214-1.179z"/>
+                </svg>
+            </div>
+            <p>🚀 <b>Resultado:</b> Los bordes siguen perfectamente definidos.</p>
+        </div>
+    </div>
+
+</body>
+</html>
